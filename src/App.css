@@ -32,15 +32,18 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-img{
+img {
   width: 200px;
   height: 200px;
 }
-.react-multiple-carousel__arrow--left, .react-multiple-carousel__arrow--right{
+
+.react-multiple-carousel__arrow--left,
+.react-multiple-carousel__arrow--right {
   display: none !important;
 }
