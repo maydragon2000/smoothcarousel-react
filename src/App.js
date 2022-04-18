@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function App() {
+
   const settings = {
     infinite: true,
     autoplay: true,
@@ -16,11 +17,28 @@ function App() {
     slidesToScroll: 1,
     cssEase: "linear",
     pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 320,
+        settings: { slidesToShow: 1 }
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 2 }
+      },
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 3 }
+      },
+      {
+        breakpoint: 1224,
+        settings: { slidesToShow: 4 }
+      }
+    ]
   };
   return (
     <div className="App">
       <h2>Hello This is my carousel</h2>
-      
       <Slider {...settings}>
         <img alt="1" src="https://thumb.tildacdn.com/tild6165-6231-4635-b962-393538353831/-/resize/400x/-/format/webp/44.png"></img>
         <img alt="2" src="https://thumb.tildacdn.com/tild6434-6435-4430-a366-656630653533/-/resize/400x/-/format/webp/25.png"></img>
@@ -37,7 +55,6 @@ function App() {
         <img alt="13" src="https://thumb.tildacdn.com/tild3865-6131-4239-b338-383665646539/-/resize/400x/-/format/webp/31.png"></img>
         <img alt="14" src="https://thumb.tildacdn.com/tild3933-3239-4639-b434-316265633939/-/resize/400x/-/format/webp/64_1.png"></img>
       </Slider>
-
     </div>
   );
 }
